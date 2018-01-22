@@ -1,10 +1,9 @@
 import urllib.request
 import re
-import http.cookiejar
 from bs4 import BeautifulSoup
 import time
-url = 'http://www.cdfangxie.com/Infor/type/typeid/36.html'
 
+url = 'http://www.cdfangxie.com/Infor/type/typeid/36.html'
 
 def checkhouse(url):
     house_lis = []
@@ -20,21 +19,19 @@ def checkhouse(url):
         house_lis.append(house)
     return house_lis
 
-
-houselist1 = []
-i = 0
-while True:
-    houselist2 = checkhouse(url)
-
-
-    if houselist1 == houselist2:
-        print('没有更新数据')
-    else:
-        if i > 0 :
-            print("新增楼盘>>>>"+ str(houselist2[0]))
-    if i > 100:
-        i = 1
-    houselist1 = houselist2
-    time.sleep(2)
-    i += 1
+if __name__ == '__main__':
+    houselist1 = []
+    i = 0
+    while True:
+        houselist2 = checkhouse(url)
+        if houselist1 == houselist2:
+            print('没有更新数据')
+        else:
+            if i > 0 :
+                print("新增楼盘>>>>"+ str(houselist2[0]))
+        if i > 100:
+            i = 1
+        houselist1 = houselist2
+        time.sleep(2)
+        i += 1
 
