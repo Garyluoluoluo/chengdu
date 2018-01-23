@@ -25,13 +25,13 @@ if __name__ == '__main__':
     while True:
         houselist2 = checkhouse(url)
         if houselist1 == houselist2:
-            print('没有更新数据')
+            print('没有更新数据'+str(houselist1[0]))
         else:
             if i > 0 :
                 print("新增楼盘>>>>"+ str(houselist2[0]))
         if i > 100:
             i = 1
         houselist1 = houselist2
-        time.sleep(2)
+        time.sleep(600)
         i += 1
 
