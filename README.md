@@ -4,8 +4,8 @@
 下一步计划加入PDF读取，直接获取楼盘价格及楼盘面积<br>
 ### 依赖库 
 pip install beautifulsoup4<br>
-pip install wxpy<bar>
+pip install wxpy<br>
 ## 更新说明
-1.已加入微信机器人支持<bar>
+1.已加入微信机器人支持<br>
 2.加入树莓派支持
   
